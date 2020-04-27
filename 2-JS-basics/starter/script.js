@@ -13,9 +13,9 @@ Mark and John are trying to compare their BMI (Body Mass Index), which is calcul
 GOOD LUCK 😀
 */
 
-console.log('test');
+// console.log('test');
 
-// define Marks and Johns parameters
+// defines Marks and Johns parameters
 var massMark, heightMark, massJohn, heightMark;
 massMark = 80; // kg
 heightMark = 1.90; // meters
@@ -23,12 +23,14 @@ heightMark = 1.90; // meters
 massJohn = 100;
 heightJohn = 2.10;
 
-// calculate Marks and John BMIs
+// calculates Marks and John BMIs
 BMI_Mark = massMark / (heightMark * heightMark);
 BMI_John = massJohn / (heightJohn * heightJohn);
-console.log(BMI_John, BMI_John);
+// prints number type 
+console.log(BMI_Mark,
+            BMI_John);
 
-// compare and print
+// compares and prints
 var compare = BMI_Mark > BMI_John;
-console.log('Is Mark\'s BMI higher than John\'s? ' + compare);
+console.log('Is Mark\'s BMI higher than John\'s? ' + '\n' + compare);
 
