@@ -13,7 +13,7 @@ Mark and John are trying to compare their BMI (Body Mass Index), which is calcul
 GOOD LUCK 😀
 */
 
-// console.log('test');
+console.log('CODDING CHALLENGE 1 - Calculate BMIs');
 
 // defines Marks and Johns parameters
 var massMark, heightMark, massJohn, heightMark;
@@ -27,10 +27,13 @@ heightJohn = 2.10;
 BMI_Mark = massMark / (heightMark * heightMark);
 BMI_John = massJohn / (heightJohn * heightJohn);
 // prints number type 
-console.log(BMI_Mark,
-            BMI_John);
+console.log('Mark\'s BMI is ' + BMI_Mark,
+            'John\'s BMI is ' + BMI_John);
 
 // compares and prints
-var compare = BMI_Mark > BMI_John;
-console.log('Is Mark\'s BMI higher than John\'s? ' + '\n' + compare);
+if (BMI_Mark > BMI_John) {
+    console.log('Mark\'s BMI higher than John\'s.');
+} else {
+    console.log('John\'s BMI higher than Mark\'s.');
+}
 
