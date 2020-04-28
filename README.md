@@ -1,5 +1,5 @@
 # JavaScript Training
-This GitHub repository is a coding and expermenting place for the Javascript training I am doing. 
+This GitHub repository is a coding and experimenting place for the Javascript training I am doing. 
 
 I am following guidance based on Udemy course "The Complete Javascript Course" by Jonas Schmedtmann. 
 Course can be found here:  https://www.udemy.com/course/the-complete-javascript-course/
