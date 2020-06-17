@@ -15,5 +15,7 @@ Course can be found here:  https://www.udemy.com/course/the-complete-javascript-
 - CODING CHALLENGE 1 - Calculate Body Mass Indexes (BMIs) 
 	- [Demo of Solution - BMIs calculated](https://zze0001.github.io/JavaScriptCompleteCourse-/2-JS-basics/starter/index.html)
 	- [Code of Solution](https://github.com/ZZE0001/JavaScriptCompleteCourse-/blob/master/2-JS-basics/starter/script.js)
-
+- If/ Else Statements 
+- Boolean Logic 
+- Ternary Operator and Switch Statements 
 
