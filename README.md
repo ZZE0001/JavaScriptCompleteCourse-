@@ -18,4 +18,11 @@ Course can be found here:  https://www.udemy.com/course/the-complete-javascript-
 - If/ Else Statements 
 - Boolean Logic 
 - Ternary Operator and Switch Statements 
+- Truthy and Falsy Values
+- Equality Operators
+- CODING CHALLENGE 2 - Average Score for Basketball Teams 
+	- [Demo of Solution - Highest average score calculated](https://zze0001.github.io/JavaScriptCompleteCourse-/2-JS-basics/starter/index.html)
+	- [Code of Solution](https://github.com/ZZE0001/JavaScriptCompleteCourse-/blob/master/2-JS-basics/starter/script.js)
+- Function Statements/Declarations
+- Function Expressions
 
