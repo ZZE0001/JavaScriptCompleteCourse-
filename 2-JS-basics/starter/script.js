@@ -187,3 +187,64 @@ calculateTip(bills[2]);
 console.log('Bills '    + bills);
 console.log('Tips '     + tips);
 console.log('Totals '    + totals);
+
+/*****************************
+* CODING CHALLENGE 4
+*/
+
+/*
+Let's remember the first coding challenge where Mark and John 
+compared their BMIs. Let's now implement the same functionality 
+with objects and methods.
+1. For each of them, create an object with properties for their 
+full name, mass, and height
+2. Then, add a method to each object to calculate the BMI. 
+Save the BMI to the object and also return it from the method.
+3. In the end, log to the console who has the highest BMI, 
+together with the full name and the respective BMI. 
+Don't forget they might have the same BMI.
+
+Remember: BMI = mass / height^2 = mass / (height * height). 
+(mass in kg and height in meter).
+
+GOOD LUCK 😀
+*/
+
+console.log('CODING CHALLENGE 4 - Calculate BMIs using objects and methods');
+
+// note: having the same method in both object viloates the DRY principle,
+// later in advanced section of the course we will correct it and make the same method on multiple objects
+// without repeating code.
+let mark = {
+    name: 'Mark',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function(){
+        this.BMI = this.mass/(this.height*this.height);
+        return this.BMI;
+    }
+}
+
+let john = {
+    name: 'John',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function(){
+        this.BMI = this.mass/(this.height*this.height);
+        return this.BMI; // so that we can calculate and read values in one take
+    }
+}
+
+// call methods
+// mark.calcBMI();
+// john.calcBMI();
+// console.log(mark, john);
+
+// print who has highest BMI
+if (mark.calcBMI() > john.calcBMI()) { // calculates and reads at the same time, calculate only once
+    console.log(mark.name + ' has higher BMI with ' + mark.BMI);
+} else if (mark.BMI < john.BMI) {
+    console.log(john.name + ' has higher BMI with ' + john.BMI);
+} else {
+    console.log(mark.name + ' and ' + john.name + ' have the same BMI with ' + mark.BMI);
+}
