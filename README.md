@@ -25,4 +25,12 @@ Course can be found here:  https://www.udemy.com/course/the-complete-javascript-
 	- [Code of Solution](https://github.com/ZZE0001/JavaScriptCompleteCourse-/blob/master/2-JS-basics/starter/script.js)
 - Function Statements/Declarations
 - Function Expressions
-
+- Arrays
+- CODING CHALLENGE 3 - Calculate Tips 
+	- [Demo of Solution - Calculate Tips](https://zze0001.github.io/JavaScriptCompleteCourse-/2-JS-basics/starter/index.html)
+	- [Code of Solution](https://github.com/ZZE0001/JavaScriptCompleteCourse-/blob/master/2-JS-basics/starter/script.js)
+- Objects and Properties
+- Objects and Methods, This Keyword
+- CODING CHALLENGE 4 - Calculate BMI - Objects and Methods
+	- [Demo of Solution - Calculate BMI](https://zze0001.github.io/JavaScriptCompleteCourse-/2-JS-basics/starter/index.html)
+	- [Code of Solution](https://github.com/ZZE0001/JavaScriptCompleteCourse-/blob/master/2-JS-basics/starter/script.js)
