@@ -60,7 +60,7 @@ while Mike's team scored 116, 94 and 123 points.
 GOOD LUCK 😀
 */
 
-console.log('CODING CHALLENGE 2 - Average score for each basketball team');
+console.log('\nCODING CHALLENGE 2 - Average score for each basketball team');
 
 // calculates average for each team
 johnsTeamScoreAverage   = (89+120+103)/3;
@@ -135,7 +135,7 @@ In the end, John would like to have 2 arrays:
 GOOD LUCK 😀
 */
 
-console.log('CODING CHALLENGE 3 - Calculate Tips');
+console.log('\nCODING CHALLENGE 3 - Calculate Tips');
 
 // variables
 let bill, tip;
@@ -210,7 +210,7 @@ Remember: BMI = mass / height^2 = mass / (height * height).
 GOOD LUCK 😀
 */
 
-console.log('CODING CHALLENGE 4 - Calculate BMIs using objects and methods');
+console.log('\nCODING CHALLENGE 4 - Calculate BMIs using objects and methods');
 
 // note: having the same method in both object viloates the DRY principle,
 // later in advanced section of the course we will correct it and make the same method on multiple objects
@@ -238,13 +238,176 @@ let john = {
 // call methods
 // mark.calcBMI();
 // john.calcBMI();
-// console.log(mark, john);
+console.log(mark, john);
 
 // print who has highest BMI
-if (mark.calcBMI() > john.calcBMI()) { // calculates and reads at the same time, calculate only once
+if (mark.calcBMI() > john.calcBMI()) { // calls methods and reads at the same time, calculate only once
     console.log(mark.name + ' has higher BMI with ' + mark.BMI);
 } else if (mark.BMI < john.BMI) {
     console.log(john.name + ' has higher BMI with ' + john.BMI);
 } else {
     console.log(mark.name + ' and ' + john.name + ' have the same BMI with ' + mark.BMI);
+}
+
+/*****************************
+* CODING CHALLENGE 5
+*/
+
+/*
+Remember the tip calculator challenge? 
+Let's create a more advanced version using everything we learned!
+
+This time, John and his family went to 5 different restaurants. 
+The bills were $124, $48, $268, $180 and $42.
+John likes to tip 20% of the bill when the bill is less 
+than $50, 15% when the bill is between $50 and $200, 
+and 10% if the bill is more than $200.
+
+Implement a tip calculator using objects and loops:
+1. Create an object with an array for the bill values
+2. Add a method to calculate the tip
+3. This method should include a loop to iterate over all the paid bills and
+do the tip calculations
+4. As an output, create 1) a new array containing all tips, 
+and 2) an array containing final paid amounts (bill + tip). 
+HINT: Start with two empty arrays [] as properties and then fill them up in the loop.
+
+
+EXTRA AFTER FINISHING: Mark's family also went on a holiday, 
+going to 4 different restaurants. The bills were $77, $375, $110, and $45.
+Mark likes to tip 20% of the bill when the bill is 
+less than $100, 10% when the bill is between $100 and $300, 
+and 25% if the bill is more than $300 (different than John).
+
+5. Implement the same functionality as before, this time using Mark's tipping rules
+6. Create a function (not a method) to calculate the average of a given array of tips. 
+HINT: Loop over the array, and in each iteration store the 
+current sum in a variable (starting from 0). After you have the sum of the array, 
+divide it by the number of elements in it (that's how you calculate the average)
+7. Calculate the average tip for each family
+8. Log to the console which family paid the highest tips on average
+
+GOOD LUCK 😀
+*/
+
+console.log('\nCODING CHALLENGE 5 - Calculate Tips - Advanced');
+
+let john_CD5 = {
+    name: 'John',
+    bills: [124, 48, 268, 180, 42],
+    calcTips: function (){
+        // creates new arrays
+        this.tips = [];
+        this.totals = [];
+
+        //iterates over bills array
+        for (let i = 0; i < this.bills.length; i++) {
+
+            // defines variables
+            let bill = this.bills[i];
+            let percentage;
+
+            // calculates tip
+            if (bill < 50) {
+                // tip 20% of the bill when the bill is less than $50
+                percentage = .2;
+            } else if (bill > 200) {
+                // tip 10% if the bill is more than $200
+                percentage = .1;
+            } else {
+                // tip 15% when the bill is between $50 and $200
+                percentage = .15;
+            }
+            
+            // calculates tip and adds tip to array
+            this.tips[i] = bill * percentage;
+
+            // calculates total and adds to array
+            this.totals[i] = bill + bill * percentage;
+
+        }
+
+    }
+    
+}
+
+let mark_CD5 = {
+    name: 'Mark',
+    bills: [77, 375, 110, 45],
+    tips: [],
+    totals: [],
+    calcTips: function (){
+
+        //iterate over bills array
+        for (let i = 0; i < this.bills.length; i++) {
+
+            // defines variables
+            let bill = this.bills[i];
+            let percentage;
+
+            // calculates tip
+            if (bill < 100) {
+                // tip 20% of the bill when the bill is less than $100
+                percentage = .2;
+            } else if (bill > 300) {
+                // tip 10% if the bill is more than $300
+                percentage = .25;
+            } else {
+                // tip 10% when the bill is between $100 and $300
+                percentage = .1;
+            }
+            let tip = bill * percentage;
+
+            // adds tip to array
+            this.tips.push(tip);
+
+            // calculates total and add to array
+            this.calcTotals(bill, tip);
+
+        }
+
+    },
+    calcTotals: function(bill, tip){
+
+                //calculate total
+                let total_CD5 = bill + tip;
+
+                //add total to array
+                this.totals.push(total_CD5);
+
+    }
+    
+}
+
+// average tips
+// we do average calc as function to not repeat code in both objects
+function avgTips(arrayTips){
+
+     // sum array
+    let sum = 0;
+    for(i = 0; i < arrayTips.length; i++) {
+        sum += arrayTips[i];
+    }
+
+    // calculate average
+    return sum/arrayTips.length;
+}
+
+// call methods
+john_CD5.calcTips();
+mark_CD5.calcTips();
+console.log(john_CD5, mark_CD5);
+
+// calculates average and stores in each object
+john_CD5.avgTip = avgTips(john_CD5.tips);
+mark_CD5.avgTip = avgTips(mark_CD5.tips);
+
+
+// print who's family paid highest average tip
+if (mark_CD5.avgTip > john_CD5.avgTip) {
+    console.log('Mark\'s family paid higher tips with average ' + mark_CD5.avgTip);
+} else if (mark_CD5.avgTip < john_CD5.avgTip) {
+    console.log('John\'s family paid higher tips with average ' + john_CD5.avgTip);
+} else {
+    console.log('Mark\'s and John\'s families paid same amount of tips with average ' + mark_CD5.avgTip);
 }
